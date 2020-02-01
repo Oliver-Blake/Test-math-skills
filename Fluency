@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>W06 Coding Assignment - Program #2</title>
+
+<script>
+let correctAnswer, feedback, firstNo, sign, secondNo, userAnswer;
+function calculate() {
+firstNo = parseFloat(document.getElementById('firstNo').value);
+sign = document.getElementById('sign').value;
+secondNo = parseFloat(document.getElementById('secondNo').value);
+userAnswer = parseFloat(document.getElementById('userAnswer').value);
+
+if (sign == "+") {
+correctAnswer = firstNo + secondNo;
+check(correctAnswer, userAnswer);
+};
+
+if (sign == "-") {
+correctAnswer = firstNo - secondNo;
+check(correctAnswer, userAnswer);
+};
+
+if (sign == "*") {
+correctAnswer = firstNo * secondNo;
+check(correctAnswer, userAnswer);
+};
+
+if (sign == "/") {
+correctAnswer = firstNo / secondNo;
+check(correctAnswer, userAnswer);
+};
+
+document.getElementById("outputDiv").innerHTML = feedback;
+
+//This function will check to see if the user's answer is correct or not.
+function check(correct, user) {
